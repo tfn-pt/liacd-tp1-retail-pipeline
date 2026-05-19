@@ -1,0 +1,223 @@
+{
+  "meta": {
+    "source_file": "journeys.csv",
+    "n_rows": 57886,
+    "generated_by": "analytics.py"
+  },
+  "traffic": {
+    "total_unique_visitors": 3960,
+    "total_visits": 57886,
+    "denominator_note": "total_visits = zone-visit rows; unique_visitors = distinct person_ids",
+    "peak_hour": 12,
+    "peak_unique_visitors": 518,
+    "quiet_hour": 21,
+    "quiet_unique_visitors": 49,
+    "by_hour_top10": [
+      {
+        "hour_of_day": 12,
+        "unique_visitors": 518,
+        "total_visits": 6998
+      },
+      {
+        "hour_of_day": 11,
+        "unique_visitors": 502,
+        "total_visits": 6601
+      },
+      {
+        "hour_of_day": 17,
+        "unique_visitors": 485,
+        "total_visits": 6211
+      },
+      {
+        "hour_of_day": 13,
+        "unique_visitors": 458,
+        "total_visits": 5935
+      },
+      {
+        "hour_of_day": 10,
+        "unique_visitors": 444,
+        "total_visits": 4853
+      },
+      {
+        "hour_of_day": 18,
+        "unique_visitors": 410,
+        "total_visits": 5206
+      },
+      {
+        "hour_of_day": 19,
+        "unique_visitors": 383,
+        "total_visits": 4816
+      },
+      {
+        "hour_of_day": 16,
+        "unique_visitors": 377,
+        "total_visits": 4460
+      },
+      {
+        "hour_of_day": 15,
+        "unique_visitors": 353,
+        "total_visits": 3635
+      },
+      {
+        "hour_of_day": 14,
+        "unique_visitors": 347,
+        "total_visits": 4345
+      }
+    ]
+  },
+  "funnel": {
+    "unique_visitors": 3960,
+    "reached_checkout": 1433,
+    "conversion_rate": 36.19,
+    "gender_breakdown": {
+      "F": {
+        "visitors": 1947,
+        "converted": 720,
+        "conversion_rate": 36.98
+      },
+      "M": {
+        "visitors": 2013,
+        "converted": 713,
+        "conversion_rate": 35.42
+      }
+    }
+  },
+  "dwell": {
+    "overall": {
+      "mean_s": 87.61,
+      "p25_s": 20.0,
+      "p50_s": 32.0,
+      "p90_s": 255.0
+    },
+    "top_zone": "Z_C2",
+    "top_zone_visits": 9195,
+    "top_zone_denominator": "zone-visit rows (same as traffic.total_visits)",
+    "by_zone_top10": [
+      {
+        "zone_id": "Z_C2",
+        "count": 9195,
+        "mean": 24.68,
+        "p25": 17.0,
+        "p50": 24.0,
+        "p90": 35.0
+      },
+      {
+        "zone_id": "Z_C1",
+        "count": 8124,
+        "mean": 24.58,
+        "p25": 17.0,
+        "p50": 24.0,
+        "p90": 35.0
+      },
+      {
+        "zone_id": "Z_C3",
+        "count": 5244,
+        "mean": 24.72,
+        "p25": 18.0,
+        "p50": 24.0,
+        "p90": 35.0
+      },
+      {
+        "zone_id": "Z_E2",
+        "count": 2417,
+        "mean": 16.23,
+        "p25": 13.0,
+        "p50": 16.0,
+        "p90": 22.0
+      },
+      {
+        "zone_id": "Z_E1",
+        "count": 2370,
+        "mean": 16.42,
+        "p25": 13.0,
+        "p50": 16.0,
+        "p90": 22.0
+      },
+      {
+        "zone_id": "Z_CK",
+        "count": 2264,
+        "mean": 185.14,
+        "p25": 117.0,
+        "p50": 179.0,
+        "p90": 292.0
+      },
+      {
+        "zone_id": "Z_N5",
+        "count": 1502,
+        "mean": 188.1,
+        "p25": 110.0,
+        "p50": 177.0,
+        "p90": 319.9
+      },
+      {
+        "zone_id": "Z_N10",
+        "count": 1488,
+        "mean": 190.04,
+        "p25": 107.75,
+        "p50": 186.0,
+        "p90": 325.0
+      },
+      {
+        "zone_id": "Z_N8",
+        "count": 1307,
+        "mean": 185.45,
+        "p25": 104.0,
+        "p50": 174.0,
+        "p90": 320.4
+      },
+      {
+        "zone_id": "Z_N9",
+        "count": 1264,
+        "mean": 190.05,
+        "p25": 105.0,
+        "p50": 184.0,
+        "p90": 326.7
+      }
+    ]
+  },
+  "anomalies": {
+    "n_anomalies": 2,
+    "baseline_meta": {
+      "method": "6-day baseline vs Day 7 (SPEC §4.2)",
+      "sigma_threshold": 2.0,
+      "n_days_available": 7,
+      "baseline_days": [
+        "2025-03-10",
+        "2025-03-11",
+        "2025-03-12",
+        "2025-03-13",
+        "2025-03-14",
+        "2025-03-15"
+      ],
+      "evaluation_day": "2025-03-16"
+    },
+    "dwell_store_mean_s": 87.61,
+    "dwell_store_std_s": 99.56,
+    "anomaly_list": [
+      {
+        "type": "traffic",
+        "subtype": "low",
+        "hour": 12,
+        "day": "2025-03-16",
+        "value": 62,
+        "baseline_mean": 76.0,
+        "baseline_std": 6.23,
+        "threshold_lo": 63.54,
+        "sigma": 2.0,
+        "detail": "Day 7 hour 12:00 — unusually quiet (62 UV < baseline 76.0 − 2.0σ=63.5)"
+      },
+      {
+        "type": "traffic",
+        "subtype": "high",
+        "hour": 19,
+        "day": "2025-03-16",
+        "value": 60,
+        "baseline_mean": 53.83,
+        "baseline_std": 2.79,
+        "threshold_hi": 59.41,
+        "sigma": 2.0,
+        "detail": "Day 7 hour 19:00 — unusually busy (60 UV > baseline 53.8 + 2.0σ=59.4)"
+      }
+    ]
+  }
+}

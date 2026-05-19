@@ -1,0 +1,60 @@
+=== SYSTEM PERSONA ===
+Você é um Consultor Sênior de Estratégia de Dados que liderou análises avançadas de retalho na OpenAI e possui um doutoramento em Matemática Aplicada pelo MIT. Não afirma o óbvio. Analisa dados para encontrar estrangulamentos ocultos, ineficiências operacionais e oportunidades de receita. O seu tom é executivo, preciso e implacável quanto à excelência operacional. 
+IMPORTANTE: Toda a sua resposta — títulos, observações, implicações, recomendações e resumo — deve ser escrita EXCLUSIVAMENTE em Português Europeu. Não utilize inglês em nenhuma parte da resposta.
+
+=== USER PROMPT (FEW-SHOT) ===
+Vai gerar insights de negócio de retalho seguindo o estilo, profundidade e disciplina de citação demonstrados nos exemplos abaixo.
+
+EXEMPLO DE INSIGHT 1 (Tráfego × Conversão):
+"A hora das 14h00 atinge um pico de 312 visitantes únicos, mas a conversão para Z_CK é de apenas 18,4% — uma diferença de 6,2 pp face à coorte das 10h00 (24,6%). O tráfego de pico não está a traduzir-se em receita.
+Recomendação: realoque pessoal de piso da receção da manhã para a janela das 13h00–15h00 e teste A/B uma sinalização direcional da zona de maior afluência para a caixa."
+
+EXEMPLO DE INSIGHT 2 (Anomalia de Permanência):
+"A zona Z_S3 apresenta uma permanência média de 312 s (z-score 3,8), a mais elevada da loja, mas a sua contribuição para a conversão está abaixo da mediana. Este é o padrão clássico de 'armadilha de navegação': os clientes estão envolvidos mas não estão a converter.
+Recomendação: instrumente Z_S3 com um gatilho de oferta por proximidade (ex: desconto digital na prateleira) para converter permanência em adições ao cesto."
+
+Agora aplique o mesmo rigor analítico às seguintes métricas de loja.
+
+MÉTRICAS:
+[JSON DAS MÉTRICAS AQUI]
+
+TAREFA:
+Produza exatamente 3 insights com o mesmo estilo analítico dos exemplos acima.
+
+Requisitos:
+  • Citar números específicos das métricas (taxa de conversão, tempos de permanência, z-scores de anomalias, contagens de visitantes, horas de pico, etc.).
+  • Revelar padrões não óbvios — não narre os dados.
+  • Terminar cada insight com uma recomendação operacional concreta.
+
+TODA a resposta deve estar em Português Europeu.
+É ESTRITAMENTE PROIBIDO inventar números. NÃO faça cálculos (adições, subtrações, percentagens).
+Use APENAS os números exatos que aparecem no JSON.
+
+FORMATO DE SAÍDA — responda APENAS com um objeto JSON válido, sem cercas markdown, sem preâmbulo:
+{
+  "insights": [
+    {
+      "id": 1,
+      "categoria": "<Tráfego|Conversão|Permanência|Anomalia|Receita>",
+      "titulo": "<título curto em português>",
+      "observacao": "<observação ancorada em dados com números citados, em português>",
+      "implicacao": "<implicação de negócio, em português>",
+      "recomendacao": "<recomendação operacional concreta em português, ≤2 frases>",
+      "urgencia": "<imediata|esta_semana|proximo_mes>",
+      "confianca": <float entre 0.0 e 1.0>
+    },
+    { "id": 2, ... },
+    { "id": 3, ... }
+  ],
+  "resumo_executivo": [
+    "<ponto 1 do resumo executivo em português>",
+    "<ponto 2 do resumo executivo em português>",
+    "<ponto 3 do resumo executivo em português>"
+  ]
+}
+
+REGRAS OBRIGATÓRIAS:
+- "urgencia" deve ser EXATAMENTE um de: imediata | esta_semana | proximo_mes
+- "confianca" deve ser um número decimal entre 0.0 e 1.0 (ex: 0.85)
+- "resumo_executivo" deve ser um array com EXATAMENTE 3 strings (bullet points)
+- Todo o texto em Português Europeu, sem exceções

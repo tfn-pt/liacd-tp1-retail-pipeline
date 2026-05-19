@@ -1,0 +1,45 @@
+{
+  "meta": {
+    "evaluated_at": "2026-05-16T19:09:54.321004+00:00",
+    "spec_version": "v14.0"
+  },
+  "metrics": {
+    "coverage": {
+      "mapped_events": 195196,
+      "total_raw_events": 250015,
+      "coverage_pct": 78.07
+    },
+    "completeness": {
+      "complete_trajectories": 2390,
+      "total_trajectories": 3960,
+      "completeness_pct": 60.35
+    },
+    "consistency": {
+      "consistent_trajectories": 3820,
+      "total_trajectories": 3960,
+      "consistency_pct": 96.46,
+      "temporal_overlap_violations": 140,
+      "demographic_violations": 0
+    },
+    "numeric_precision": {
+      "numeric_precision_pct": 100.0,
+      "strategy_used": "zero-shot",
+      "unverified_count": 0
+    }
+  },
+  "targets": {
+    "coverage_target": "85%",
+    "completeness_target": "70%",
+    "consistency_target": "95%",
+    "precision_target": "90%"
+  },
+  "targets_met": {
+    "coverage_met": false,
+    "completeness_met": false,
+    "consistency_met": true,
+    "precision_met": true
+  },
+  "summary": {
+    "all_targets_met": false
+  }
+}

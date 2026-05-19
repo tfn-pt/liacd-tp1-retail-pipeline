@@ -1,0 +1,18 @@
+# Ambientes Virtuais Python
+venv/
+env/
+.env/
+
+# Cache do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ficheiros de Sistema e IDEs
+.DS_Store
+.vscode/
+.idea/
+
+# Dados Brutos (Pesados)
+data/
